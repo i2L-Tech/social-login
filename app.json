@@ -13,16 +13,27 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.i2l.social-login"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.i2l.social-login"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2afb45b5-53dd-4d0e-a059-3b60104dff38"
+      }
+    },
+    "owner": "skthasan",
+    "scheme": "social-login",
+    "description": "WigglyDog is an app under development",
+    "plugins": ["expo-secure-store"]
   }
 }
