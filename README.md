@@ -62,7 +62,7 @@ Set up OAuth credentials in Google Cloud Console [https://console.cloud.google.c
 
    ```sh
    npm install
-   
+
    ```
 
    or
@@ -94,10 +94,15 @@ Set up OAuth credentials in Google Cloud Console [https://console.cloud.google.c
 - Test using Android sdk (Android Studio / Android sdk command-line needed)
   ```sh
   expo prebuild
-  expo run:andriod -c # or
-  npx expo run:android
+  # Android build
+  npx expo run:android # or
+  expo run:andriod
+  # Ios Build
+  expo run:ios
+  npx expo run:ios
   ```
 - Test using Android apk (using eas)
+
   ```sh
   eas login # login to expo
   eas build -p android --profile preview
@@ -106,6 +111,9 @@ Set up OAuth credentials in Google Cloud Console [https://console.cloud.google.c
   # disable "auto blocker"
   # enable "Install unknown app" for myfiles or download manager
   # ***After installation reset the above settings and launch the app***
+
+  # check app log
+  adb logcat *:S ReactNative:V ReactNativeJS:V
   ```
 
 ## Package Dependencies

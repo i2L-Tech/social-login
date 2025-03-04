@@ -131,3 +131,5 @@ dist
 
 /android
 /ios
+eas.json
+package-lock.json

@@ -18,7 +18,7 @@ export default {
 			GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
 			GOOGLE_ANDROID_CLIENT_ID: process.env.GOOGLE_ANDROID_CLIENT_ID,
 			GOOGLE_IOS_CLIENT_ID: process.env.GOOGLE_IOS_CLIENT_ID,
-			// API_URL: process.env.API_URL,
+
 			eas: {
 				projectId: "0aed7d49-21aa-44eb-bccf-b5e6b63bfb01",
 			},

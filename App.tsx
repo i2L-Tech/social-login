@@ -26,7 +26,6 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 const MainNavigator = () => {
 	const { user } = useAuth();
-
 	return (
 		<Stack.Navigator id={undefined} screenOptions={{ headerShown: false }}>
 			{user ? (

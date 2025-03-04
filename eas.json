@@ -1,21 +1,43 @@
 {
-  "cli": {
-    "version": ">= 15.0.10",
-    "appVersionSource": "remote"
-  },
-  "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
-    },
-    "preview": {
-      "distribution": "internal"
-    },
-    "production": {
-      "autoIncrement": true
-    }
-  },
-  "submit": {
-    "production": {}
-  }
+	"cli": {
+		"version": ">= 15.0.10",
+		"appVersionSource": "remote"
+	},
+	"build": {
+		"development": {
+			"developmentClient": true,
+			"distribution": "internal",
+			"env": {
+				"GOOGLE_CLIENT_ID": "279536524142-plksoplgaoglsdugrftk52nrpl6mhtbb.apps.googleusercontent.com",
+				"GOOGLE_ANDROID_CLIENT_ID": "279536524142-vv83ipupdsnj8rfhd9hj7ql1i1pnum9s.apps.googleusercontent.com",
+				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com"
+			}
+		},
+		"android": {
+			"env": {
+				"GOOGLE_CLIENT_ID": "279536524142-plksoplgaoglsdugrftk52nrpl6mhtbb.apps.googleusercontent.com",
+				"GOOGLE_ANDROID_CLIENT_ID": "279536524142-vv83ipupdsnj8rfhd9hj7ql1i1pnum9s.apps.googleusercontent.com",
+				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com"
+			}
+		},
+		"preview": {
+			"distribution": "internal",
+			"env": {
+				"GOOGLE_CLIENT_ID": "279536524142-plksoplgaoglsdugrftk52nrpl6mhtbb.apps.googleusercontent.com",
+				"GOOGLE_ANDROID_CLIENT_ID": "279536524142-vv83ipupdsnj8rfhd9hj7ql1i1pnum9s.apps.googleusercontent.com",
+				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com"
+			}
+		},
+		"production": {
+			"autoIncrement": true,
+			"env": {
+				"GOOGLE_CLIENT_ID": "279536524142-plksoplgaoglsdugrftk52nrpl6mhtbb.apps.googleusercontent.com",
+				"GOOGLE_ANDROID_CLIENT_ID": "279536524142-vv83ipupdsnj8rfhd9hj7ql1i1pnum9s.apps.googleusercontent.com",
+				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com"
+			}
+		}
+	},
+	"submit": {
+		"production": {}
+	}
 }
