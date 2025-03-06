@@ -10,7 +10,6 @@ import { User } from "../models/UserModel";
 // ====================================================================================================================
 
 // Keys for storing user data securely
-// ??? LATER MOVE ALL THE STORAGE KEYS TO CONSTANT FILE
 const STORAGE_USER_key = "authUser";
 const STORAGE_TOKEN_KEY = "authToken";
 

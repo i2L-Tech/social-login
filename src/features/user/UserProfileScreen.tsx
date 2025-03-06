@@ -4,7 +4,7 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 import { useAuth } from "../../shared/context/AuthContext";
-import Button from "../../shared/components/Button"; //??? SEE IF WE CAN LOAD MULTIPLE COMPONENT IN ONE IMPORT LIKE REACT-NATIVE
+import Button from "../../shared/components/Button";
 
 // ================================================================================================
 
