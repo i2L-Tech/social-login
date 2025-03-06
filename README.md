@@ -7,7 +7,7 @@ This project implements social login using Expo and React Native. It supports au
 - Google Login (Authentication)
 - Global State (Context API)
 - Reusable Components with MVC Architecture
-- Services
+- Auth Service
 - Custom Hooks
 - Secure local storage
 
@@ -71,11 +71,65 @@ Set up OAuth credentials in Google Cloud Console [https://console.cloud.google.c
    yarn install
    ```
 
-3. Create an `.env` file and add your OAuth credentials:
+3. Create an `.env` file and add your OAuth credentials for google login from web or expo local test:
    ```env
    GOOGLE_CLIENT_ID=YOUR_WEB_CLIENT_ID
    GOOGLE_ANDROID_CLIENT_ID=YOUR_ANDROID_CLIENT_ID
    GOOGLE_IOS_CLIENT_ID=YOUR_IOS_CLIENT_ID
+   ```
+4. Create an `eas.json` file on the root folder and add your OAuth credentials for use in eas build for android or ios
+
+   ```json
+   {
+   	"cli": {
+   		"version": ">= 15.0.10",
+   		"appVersionSource": "remote"
+   	},
+   	"build": {
+   		"development": {
+   			"developmentClient": true,
+   			"distribution": "internal",
+   			"env": {
+   				"GOOGLE_CLIENT_ID": "your web client id",
+   				"GOOGLE_ANDROID_CLIENT_ID": "your android client id",
+   				"GOOGLE_IOS_CLIENT_ID": "your ios client id"
+   			}
+   		},
+   		"android": {
+   			"env": {
+   				"GOOGLE_CLIENT_ID": "",
+   				"GOOGLE_ANDROID_CLIENT_ID": "",
+   				"GOOGLE_IOS_CLIENT_ID": ""
+   			}
+   		},
+   		"ios": {
+   			"env": {
+   				"GOOGLE_CLIENT_ID": "",
+   				"GOOGLE_ANDROID_CLIENT_ID": "",
+   				"GOOGLE_IOS_CLIENT_ID": ""
+   			}
+   		},
+   		"preview": {
+   			"distribution": "internal",
+   			"env": {
+   				"GOOGLE_CLIENT_ID": "",
+   				"GOOGLE_ANDROID_CLIENT_ID": "",
+   				"GOOGLE_IOS_CLIENT_ID": ""
+   			}
+   		},
+   		"production": {
+   			"autoIncrement": true,
+   			"env": {
+   				"GOOGLE_CLIENT_ID": "",
+   				"GOOGLE_ANDROID_CLIENT_ID": "",
+   				"GOOGLE_IOS_CLIENT_ID": ""
+   			}
+   		}
+   	},
+   	"submit": {
+   		"production": {}
+   	}
+   }
    ```
 
 ## Usage
@@ -85,8 +139,7 @@ Set up OAuth credentials in Google Cloud Console [https://console.cloud.google.c
 - Test using Web or Expo Go
   ```sh
   # option -c clears the cache
-  expo start -c
-  # or
+  expo start -c # OR
   npx expo start -c
   # press w to run on web
   # scan the qr code to run on device
@@ -95,11 +148,11 @@ Set up OAuth credentials in Google Cloud Console [https://console.cloud.google.c
   ```sh
   expo prebuild
   # Android build
-  npx expo run:android # or
+  npx expo run:android # OR
   expo run:andriod
   # Ios Build
+  npx expo run:ios # OR
   expo run:ios
-  npx expo run:ios
   ```
 - Test using Android apk (using eas)
 
@@ -112,35 +165,42 @@ Set up OAuth credentials in Google Cloud Console [https://console.cloud.google.c
   # enable "Install unknown app" for myfiles or download manager
   # ***After installation reset the above settings and launch the app***
 
-  # check app log
+  # check app log for errors
   adb logcat *:S ReactNative:V ReactNativeJS:V
   ```
 
 ## Package Dependencies
 
-      react
-      react-dom
-      react-native
-      react-native-dotenv: to manage environment variables
-      react-native-web
-      @expo/metro-runtime
-      @react-native-async-storage/async-storage
-      @react-navigation/native
-      @react-navigation/stack : Managing screens in a stack
+    react
+    react-dom
+    react-native
+    react-native-dotenv: to manage environment variables
+    react-native-gesture-handler
+    react-native-safe-area-context
+    react-native-screens
+    react-native-web
+    @expo/config
+    @expo/metro-runtime
+    @react-native-async-storage/async-storage
+    @react-navigation/native
+    @react-navigation/stack : Managing screens in a stack
 
-      expo-auth-session : Handles authentication with OAuth providers like Google.
-      expo-random : Required for secure authentication flows.
-      expo-web-browser : Manages authentication pop-ups.
-      expo-auth-session/providers/google : Required for calling google hooks.
+    expo-auth-session : Handles authentication with OAuth providers like Google.
+    expo-modules-core
+    expo-web-browser : Manages authentication pop-ups.
+    expo-constants
+    expo-secure-store
+    expo-status-bar
+    expo-auth-session/providers/google
+    expo-system-ui
 
-      expo-constants
-      expo-secure-store
-      expo-status-bar
-
-      -- DEV Dependencies
-      @babel/core
-      @types/react
-      typescript
+    -- DEV Dependencies
+    @babel/core
+    @react-native-community/cli
+    @types/node
+    @types/react
+    @types/react-native
+    typescript
 
 ## Application Structure for Better Scalability
 

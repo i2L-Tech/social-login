@@ -26,7 +26,6 @@ const LoginScreen: React.FC = () => {
 // ================================================================================================
 
 // Stylesfor the login page
-// ??? SEE IF WE CAN MOVE THE STYLE TO SHARED
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,

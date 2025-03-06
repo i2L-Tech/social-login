@@ -10,7 +10,6 @@ import {
 	googleAndroidClientId,
 	googleIosClientId,
 } from "../constants/Config";
-import Constants from "expo-constants";
 
 // ====================================================================================================================
 // Open AuthSession manually on web
@@ -21,15 +20,6 @@ if (Platform.OS === "web") {
 
 // Custom hook for accessing google login
 const useGoogleAuth = () => {
-	// console.log(
-	// 	"useGoogleAuth platform & env ",
-	// 	Constants.platform,
-	// 	Constants.executionEnvironment
-	// );
-
-	// To determin hether to use schema or native redirecturi
-	// const isRunningInEASBuild = Constants.executionEnvironment === "standalone";
-
 	// Dynamically determine redirect URI based on environment
 	const [request, response, promptAsync] = Google.useAuthRequest({
 		clientId: Platform.select({
@@ -45,8 +35,6 @@ const useGoogleAuth = () => {
 			Platform.OS === "web"
 				? "http://localhost:8081" // Web Expo Dev mode
 				: AuthSession.makeRedirectUri({
-						// native: isRunningInEASBuild ? undefined : "com.i2l.sociallogin://", // for emulator option
-						// scheme: isRunningInEASBuild ? "com.i2l.sociallogin" : undefined, // for deeplinking the device
 						native: "com.i2l.sociallogin://",
 						path: "redirect",
 				  }), // Android and IoS login (not using expo go)

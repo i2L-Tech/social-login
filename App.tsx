@@ -1,4 +1,4 @@
-// MAIN Wiggle.dog app starting point
+// MAIN social-login app starting point
 // It loads auth context for state management and login and profile screen on a stack
 // ================================================================================================
 
@@ -8,6 +8,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { enableScreens } from "react-native-screens";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+
 import { AuthProvider, useAuth } from "./src/shared/context/AuthContext";
 import LoginScreen from "./src/features/auth/LoginScreen";
 import UserProfileScreen from "./src/features/user/UserProfileScreen";
@@ -37,6 +38,8 @@ const MainNavigator = () => {
 	);
 };
 
+// ================================================================================================
+
 export default function App() {
 	return (
 		<SafeAreaProvider>
@@ -48,3 +51,5 @@ export default function App() {
 		</SafeAreaProvider>
 	);
 }
+
+// ================================================================================================
