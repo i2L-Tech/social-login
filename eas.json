@@ -10,14 +10,18 @@
 			"env": {
 				"GOOGLE_CLIENT_ID": "279536524142-plksoplgaoglsdugrftk52nrpl6mhtbb.apps.googleusercontent.com",
 				"GOOGLE_ANDROID_CLIENT_ID": "279536524142-vv83ipupdsnj8rfhd9hj7ql1i1pnum9s.apps.googleusercontent.com",
-				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com"
+				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com",
+				"GOOGLE_REDIRECT_URI": "com.i2l.sociallogin://",
+				"WEB_URL": "http://localhost:8081"
 			}
 		},
 		"android": {
 			"env": {
 				"GOOGLE_CLIENT_ID": "279536524142-plksoplgaoglsdugrftk52nrpl6mhtbb.apps.googleusercontent.com",
 				"GOOGLE_ANDROID_CLIENT_ID": "279536524142-vv83ipupdsnj8rfhd9hj7ql1i1pnum9s.apps.googleusercontent.com",
-				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com"
+				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com",
+				"GOOGLE_REDIRECT_URI": "com.i2l.sociallogin://",
+				"WEB_URL": "http://localhost:8081"
 			}
 		},
 		"preview": {
@@ -25,7 +29,9 @@
 			"env": {
 				"GOOGLE_CLIENT_ID": "279536524142-plksoplgaoglsdugrftk52nrpl6mhtbb.apps.googleusercontent.com",
 				"GOOGLE_ANDROID_CLIENT_ID": "279536524142-vv83ipupdsnj8rfhd9hj7ql1i1pnum9s.apps.googleusercontent.com",
-				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com"
+				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com",
+				"GOOGLE_REDIRECT_URI": "com.i2l.sociallogin://",
+				"WEB_URL": "http://localhost:8081"
 			}
 		},
 		"production": {
@@ -33,7 +39,9 @@
 			"env": {
 				"GOOGLE_CLIENT_ID": "279536524142-plksoplgaoglsdugrftk52nrpl6mhtbb.apps.googleusercontent.com",
 				"GOOGLE_ANDROID_CLIENT_ID": "279536524142-vv83ipupdsnj8rfhd9hj7ql1i1pnum9s.apps.googleusercontent.com",
-				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com"
+				"GOOGLE_IOS_CLIENT_ID": "279536524142-tjb7bc91qufbvi551bj9e9q6vn3i2n8j.apps.googleusercontent.com",
+				"GOOGLE_REDIRECT_URI": "com.i2l.sociallogin://",
+				"WEB_URL": "http://localhost:8081"
 			}
 		}
 	},

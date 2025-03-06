@@ -9,6 +9,8 @@ import {
 	googleClientId,
 	googleAndroidClientId,
 	googleIosClientId,
+	googleRedirectUri,
+	webUrl,
 } from "../constants/Config";
 
 // ====================================================================================================================
@@ -33,9 +35,9 @@ const useGoogleAuth = () => {
 		scopes: ["openid", "profile", "email"],
 		redirectUri:
 			Platform.OS === "web"
-				? "http://localhost:8081" // Web Expo Dev mode
+				? webUrl // Web Expo Dev mode
 				: AuthSession.makeRedirectUri({
-						native: "com.i2l.sociallogin://",
+						native: googleRedirectUri,
 						path: "redirect",
 				  }), // Android and IoS login (not using expo go)
 	});
